@@ -1,0 +1,63 @@
+dist: trusty
+sudo: required
+
+language: node_js
+node_js:
+  - "stable"
+  
+services:
+  - mongodb
+  
+cache: 
+  directories:
+    - node_modules
+
+addons:
+  sonarcloud:
+    organization: "tanujamedisetti87-github"
+    token:
+      secure: "c31adcd738465686855224f7f9b30c8ec5008271"
+  sauce_connect:
+    username: "TanujaMedisetti87"
+    access_key: "130dda79-1dea-45cd-849c-24cfbe048884"
+
+deploy:
+  - provider: s3
+    access_key_id: $AWS_ACCESS_KEY # declared in Travis repo settings
+    secret_access_key: $AWS_SECRET_KEY
+    local_dir: dpl_cd_upload
+    bucket: messi10
+    region: us-east-1
+    skip_cleanup: true
+    acl: public_read
+    detect_encoding: true
+    on:
+      repo: TanujaMedisetti87/Resume
+      all_branches: true
+  - provider: codedeploy
+    access_key_id: $AWS_ACCESS_KEY # declared in Travis repo settings
+    secret_access_key: $AWS_SECRET_KEY
+    bucket: messi10
+    key: logan10.zip
+    bundle_type: zip
+    application: TestApplication
+    deployment_group: TestApplication
+    region: us-east-1
+    on:
+      repo: TanujaMedisetti87/Resume
+      all_branches: true
+after_deploy:
+  - echo "Performing after deploy procedures..."  
+
+before_script:
+  - npm install
+script:
+  - sonar-scanner
+  - zip -r logan10 *
+  - mkdir -p dpl_cd_upload
+  - mv logan10.zip dpl_cd_upload/logan10.zip
+  
+  
+  
+  
+  
