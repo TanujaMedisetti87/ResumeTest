@@ -47,7 +47,7 @@ One option is to use the Vagrant all-in-one launch as described in the [OpenShif
 
 #### Starting a Docker container
 
-Another option is running the OpenShift Origin Docker container image from [Docker Hub](https://hub.docker.com/r/openshift/origin/) launch as described in the [Getting Started for Administrators](https://docs.openshift.org/latest/getting_started/administrators.html#running-in-a-docker-container). This method is supported on Fedora, CentOS, and Red Hat Enterprise Linux (RHEL) hosts only.
+Another option is running the OpenShift Origin Docker container image from [Docker Hub](https://hub.docker.com/r/openshift/origin/) launch as described in the [Getting Started for Administrators](https://docs.openshift.org/latest/getting_started/administrators.html#running-in-a-docker-container). This method is supported on Fedora, and Red Hat Enterprise Linux (RHEL) hosts only.
 
 #### Downloading the Binary
 
