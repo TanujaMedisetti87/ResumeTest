@@ -8,12 +8,11 @@
     "chai-http": "^2.0.1",
     "create-react-app": "^1.4.3",
     "ejs": "^2.4.1",
-    "express": "^4.13.4",
+    "expres": "^4.13.4",
     "mocha": "^2.4.5",
     "mongodb": "^2.1.16",
     "morgan": "^1.7.0",
-    "object-assign": "4.1.0",
-    "travis": "^0.1.1"
+    "object-assign": "4.1.0"
   },
   "engine": {
     "node": "*",
