@@ -9,7 +9,7 @@ var release = {
       username:'admin',
       password:'admin123'
     },
-    pomDir: 'pom',
+    pomDir: '',
     url: 'http://ec2-54-209-206-172.compute-1.amazonaws.com:8081/nexus/content/repositories/nexus-repo/',
     artifact: 'nexus-deployer.zip',
     noproxy: 'http://ec2-54-209-206-172.compute-1.amazonaws.com',
