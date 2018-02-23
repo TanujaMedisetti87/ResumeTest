@@ -1,16 +1,16 @@
 var deployer = require('nexus-deployer');
  
 var release = {
-    groupId: 'com',
-    artifactId: 'my-app',
+    groupId: 'ResumeTest',
+    artifactId: 'ResumeTest',
     version: '1.0',
     packaging: 'zip',
     auth: {
       username:'admin',
       password:'admin123'
     },
-    pomDir: '',
-    url: 'http://ec2-54-209-206-172.compute-1.amazonaws.com:8081/nexus/content/repositories/nexus-repo/',
+    pomDir: 'build',
+    url: 'http://ec2-54-209-206-172.compute-1.amazonaws.com:8081/nexus/content/repositories/releases/',
     artifact: 'my-app.zip',
     noproxy: 'http://ec2-54-209-206-172.compute-1.amazonaws.com',
     cwd: ''
