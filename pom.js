@@ -4,7 +4,7 @@ var release = {
     groupId: 'ResumeTest',
     artifactId: 'ResumeTest',
     version: '1.0',
-    packaging: 'jar',
+    packaging: 'zip',
     auth: {
       username:'admin',
       password:'admin123'
